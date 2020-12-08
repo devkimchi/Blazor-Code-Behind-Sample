@@ -13,12 +13,12 @@
             </NavLink>
         </li>
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
+            <NavLink class="nav-link" href="counter" Match="NavLinkMatch.All">
                 <span class="oi oi-plus" aria-hidden="true"></span> Counter
             </NavLink>
         </li>
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="counter-behind">
+            <NavLink class="nav-link" href="counter-behind" Match="NavLinkMatch.All">
                 <span class="oi oi-plus" aria-hidden="true"></span> Counter &ndash; CodeBehind
             </NavLink>
         </li>
@@ -29,14 +29,3 @@
         </li>
     </ul>
 </div>
-
-@code {
-    private bool collapseNavMenu = true;
-
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
-}
