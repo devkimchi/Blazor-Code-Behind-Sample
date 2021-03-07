@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Components;
 
 namespace BlazorServerApp.Pages
 {
-    public partial class FetchData : ComponentBase
+    public partial class FetchDataBehind : ComponentBase
     {
         [Inject]
         protected WeatherForecastService Service { get; set; }

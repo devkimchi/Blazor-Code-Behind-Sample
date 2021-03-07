@@ -6,9 +6,9 @@ namespace BlazorAssemblyApp.Pages
     {
         protected int CurrentCount { get; set; } = 0;
 
-        protected void IncrementCount()
+        protected void IncrementCount(int count)
         {
-            this.CurrentCount++;
+            this.CurrentCount += count;
         }
     }
 }

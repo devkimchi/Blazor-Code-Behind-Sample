@@ -1,10 +1,13 @@
 ﻿@page "/fetchdata"
 
+@using BlazorServerApp.Data
+@inject WeatherForecastService ForecastService
+
 <h1>Weather forecast</h1>
 
 <p>This component demonstrates fetching data from a service.</p>
 
-@if (this.Forecasts == null)
+@if (forecasts == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -20,7 +23,7 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var forecast in this.Forecasts)
+            @foreach (var forecast in forecasts)
             {
                 <tr>
                     <td>@forecast.Date.ToShortDateString()</td>
@@ -31,4 +34,13 @@ else
             }
         </tbody>
     </table>
+}
+
+@code {
+    private WeatherForecast[] forecasts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+    }
 }

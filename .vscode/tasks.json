@@ -7,8 +7,8 @@
       "type": "process",
       "args": [
         "build",
-        "${workspaceFolder}/BlazorServerApp/BlazorServerApp.csproj",
-        // "${workspaceFolder}/BlazorAssemblyApp/BlazorAssemblyApp.csproj",
+        // "${workspaceFolder}/BlazorServerApp/BlazorServerApp.csproj",
+        "${workspaceFolder}/BlazorAssemblyApp/BlazorAssemblyApp.csproj",
         "/property:GenerateFullPaths=true",
         "/consoleloggerparameters:NoSummary"
       ],
@@ -20,8 +20,8 @@
       "type": "process",
       "args": [
         "publish",
-        "${workspaceFolder}/BlazorServerApp/BlazorServerApp.csproj",
-        // "${workspaceFolder}/BlazorAssemblyApp/BlazorAssemblyApp.csproj",
+        // "${workspaceFolder}/BlazorServerApp/BlazorServerApp.csproj",
+        "${workspaceFolder}/BlazorAssemblyApp/BlazorAssemblyApp.csproj",
         "/property:GenerateFullPaths=true",
         "/consoleloggerparameters:NoSummary"
       ],
